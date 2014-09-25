@@ -4,6 +4,16 @@
       "name": "Categories",
       "examples": [
         {
+          "description": "Create a new category",
+          "link": "categories/create_a_new_category.json",
+          "groups": "all"
+        },
+        {
+          "description": "Updating a category",
+          "link": "categories/updating_a_category.json",
+          "groups": "all"
+        },
+        {
           "description": "Viewing a category",
           "link": "categories/viewing_a_category.json",
           "groups": "all"

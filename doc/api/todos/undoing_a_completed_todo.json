@@ -13,7 +13,7 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/todos/afd86960-bb9c-46a4-8706-93f2e07afc3d/incomplete",
+      "request_path": "/todos/d760263f-2271-4629-8cf1-7d8e498ebd21/incomplete",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
@@ -24,16 +24,16 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/afd86960-bb9c-46a4-8706-93f2e07afc3d\"},\"todos:complete\":{\"href\":\"http://example.org/todos/afd86960-bb9c-46a4-8706-93f2e07afc3d/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"afd86960-bb9c-46a4-8706-93f2e07afc3d\",\"title\":\"finish my homework\",\"due_date\":\"2014-10-01\",\"notes\":\"calculus will be hard\",\"created_at\":\"2014-09-25T18:06:09.550Z\",\"updated_at\":\"2014-09-25T18:06:09.550Z\",\"completed_on\":null,\"_embedded\":{\"categories\":[]}}",
+      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/d760263f-2271-4629-8cf1-7d8e498ebd21\"},\"todos:complete\":{\"href\":\"http://example.org/todos/d760263f-2271-4629-8cf1-7d8e498ebd21/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"d760263f-2271-4629-8cf1-7d8e498ebd21\",\"title\":\"finish my homework\",\"due_date\":\"2014-10-01\",\"notes\":\"calculus will be hard\",\"created_at\":\"2014-09-25T18:26:55.746Z\",\"updated_at\":\"2014-09-25T18:26:55.746Z\",\"completed_on\":null,\"_embedded\":{\"categories\":[]}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"e3ad5cfcf8bb199c6228b00bce99dfa8\"",
+        "ETag": "\"d776c3bfb03aaeb4d5c98dfbe567533b\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "065e8f26-765b-4e32-b007-fe5c303a0f7b",
-        "X-Runtime": "0.003128",
+        "X-Request-Id": "1471e6c0-599e-4233-a97d-6a8aa436716e",
+        "X-Runtime": "0.004091",
         "Content-Length": "578"
       },
       "response_content_type": "application/json; charset=utf-8",

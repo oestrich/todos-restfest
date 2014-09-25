@@ -13,25 +13,27 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/categories/bc501489-3085-4ee8-868f-67e46eb66a2a",
+      "request_path": "/categories/2c0e698a-0309-4fb5-b8ea-3e6aa14c6d67",
       "request_body": null,
       "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
       },
       "request_query_parameters": {
       },
-      "request_content_type": null,
+      "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/categories/bc501489-3085-4ee8-868f-67e46eb66a2a\"}},\"id\":\"bc501489-3085-4ee8-868f-67e46eb66a2a\",\"name\":\"Work\",\"created_at\":\"2014-09-25T18:06:09.408Z\",\"updated_at\":\"2014-09-25T18:06:09.408Z\"}",
+      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/categories/2c0e698a-0309-4fb5-b8ea-3e6aa14c6d67\"}},\"id\":\"2c0e698a-0309-4fb5-b8ea-3e6aa14c6d67\",\"name\":\"Work\",\"created_at\":\"2014-09-25T18:26:55.588Z\",\"updated_at\":\"2014-09-25T18:26:55.588Z\"}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"43e30fd716cbf39be535ea31f22d7c71\"",
+        "ETag": "\"06a59066b36c6542c6b838db19d01940\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "7a9b60c4-61e0-4f6c-99b5-cafe69c058cd",
-        "X-Runtime": "0.003161",
+        "X-Request-Id": "cc7d3171-e5e4-48e0-802b-757cfca61a82",
+        "X-Runtime": "0.003067",
         "Content-Length": "332"
       },
       "response_content_type": "application/json; charset=utf-8",
