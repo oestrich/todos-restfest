@@ -1,8 +1,8 @@
 {
   "resource": "Todos",
-  "http_method": "POST",
-  "route": "/todos",
-  "description": "Creating a new todo",
+  "http_method": "PUT",
+  "route": "/todos/:id",
+  "description": "Updating an existing record",
   "explanation": null,
   "parameters": [
     {
@@ -30,8 +30,8 @@
   ],
   "requests": [
     {
-      "request_method": "POST",
-      "request_path": "/todos",
+      "request_method": "PUT",
+      "request_path": "/todos/fd14985d-a7dd-4b28-ab09-2b444f0f0c8c",
       "request_body": "{\"todo\":{\"title\":\"new title\",\"due_date\":\"2014-11-01\"}}",
       "request_headers": {
         "Accept": "application/json",
@@ -40,20 +40,19 @@
       "request_query_parameters": {
       },
       "request_content_type": "application/json",
-      "response_status": 201,
-      "response_status_text": "Created",
-      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/ee765ce3-5540-4548-886c-937d368283b6\"},\"todos:complete\":{\"href\":\"http://example.org/todos/ee765ce3-5540-4548-886c-937d368283b6/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"ee765ce3-5540-4548-886c-937d368283b6\",\"title\":\"new title\",\"due_date\":\"2014-11-01\",\"notes\":null,\"created_at\":\"2014-09-25T16:29:09.081Z\",\"updated_at\":\"2014-09-25T16:29:09.081Z\",\"completed_on\":null}",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/fd14985d-a7dd-4b28-ab09-2b444f0f0c8c\"},\"todos:complete\":{\"href\":\"http://example.org/todos/fd14985d-a7dd-4b28-ab09-2b444f0f0c8c/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"fd14985d-a7dd-4b28-ab09-2b444f0f0c8c\",\"title\":\"new title\",\"due_date\":\"2014-11-01\",\"notes\":\"calculus will be hard\",\"created_at\":\"2014-09-25T16:29:09.085Z\",\"updated_at\":\"2014-09-25T16:29:09.088Z\",\"completed_on\":null}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
-        "Location": "http://example.org/todos/ee765ce3-5540-4548-886c-937d368283b6",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"bddeb2e2e5c4b2bff267d583654a763e\"",
+        "ETag": "\"99d2bd62d6702ea481696eea56285491\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "ffb84786-3f71-4db9-9dc3-ef037832c66a",
-        "X-Runtime": "0.002547",
-        "Content-Length": "520"
+        "X-Request-Id": "a5cbf19d-8677-4bfb-9d0d-fc7dfe2ebc84",
+        "X-Runtime": "0.004339",
+        "Content-Length": "539"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

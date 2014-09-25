@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     end
   end
 
-  mount Raddocs::App => "/docs"
+  mount Raddocs::App => "/docs", :as => :docs
 
   root :to => "root#index"
 end

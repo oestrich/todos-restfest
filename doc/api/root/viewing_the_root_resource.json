@@ -23,17 +23,17 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/\"}}}",
+      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/\"},\"todos:incomplete\":{\"href\":\"http://example.org/todos\",\"name\":\"Incomplete todos\"},\"todos:complete\":{\"href\":\"http://example.org/todos/completed\",\"name\":\"Completed todos\"},\"todos:docs\":{\"href\":\"http://example.org/docs\",\"name\":\"Human documentation\"}}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"bac6e1d158bfe0eda52e1d85036e81c4\"",
+        "ETag": "\"62b75742e087c88cb7fef951e40cc291\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "8f7a3e98-51f6-4869-9aaf-c2839b374830",
-        "X-Runtime": "0.004923",
-        "Content-Length": "147"
+        "X-Request-Id": "bbe05c2a-dd41-4f4f-aa10-081103904eac",
+        "X-Runtime": "0.005116",
+        "Content-Length": "393"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

@@ -24,6 +24,10 @@ resource "Root" do
             "href" => completed_todos_url(:host => host),
             "name" => "Completed todos",
           },
+          "todos:docs" => {
+            "href" => docs_url(:host => host),
+            "name" => "Human documentation",
+          },
         }
       }.to_json)
     end

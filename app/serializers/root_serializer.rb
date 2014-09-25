@@ -14,6 +14,10 @@ class RootSerializer < ActiveModel::Serializer
         "href" => completed_todos_url,
         "name" => "Completed todos",
       },
+      "todos:docs" => {
+        "href" => docs_url,
+        "name" => "Human documentation",
+      },
     })
   end
 end

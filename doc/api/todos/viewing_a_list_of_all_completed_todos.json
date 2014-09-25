@@ -1,0 +1,44 @@
+{
+  "resource": "Todos",
+  "http_method": "GET",
+  "route": "/todos/completed",
+  "description": "Viewing a list of all completed todos",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/todos/completed",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+        "{}": null
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"_embedded\":{\"todos\":[{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/65c68f76-b7fc-4f73-9aec-b57bf6c8b298\"},\"todos:incomplete\":{\"href\":\"http://example.org/todos/65c68f76-b7fc-4f73-9aec-b57bf6c8b298/incomplete\",\"name\":\"Mark todo as incomplete\"}},\"id\":\"65c68f76-b7fc-4f73-9aec-b57bf6c8b298\",\"title\":\"finish my homework again\",\"due_date\":null,\"notes\":null,\"created_at\":\"2014-09-25T16:29:09.067Z\",\"updated_at\":\"2014-09-25T16:29:09.067Z\",\"completed_on\":\"2014-09-25\"}]},\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"up\":{\"href\":\"http://example.org/\"},\"self\":{\"href\":\"http://example.org/todos/completed\",\"name\":\"Completed todos\"}}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"886a0eface0feeca00264aa8a73f57af\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "7d67e68a-2fdf-46c2-b11d-32c21d9e5670",
+        "X-Runtime": "0.002327",
+        "Content-Length": "789"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

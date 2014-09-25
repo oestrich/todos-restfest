@@ -24,13 +24,28 @@
           "groups": "all"
         },
         {
+          "description": "Creating a new todo with a given id",
+          "link": "todos/creating_a_new_todo_with_a_given_id.json",
+          "groups": "all"
+        },
+        {
           "description": "Undoing a completed todo",
           "link": "todos/undoing_a_completed_todo.json",
           "groups": "all"
         },
         {
-          "description": "Viewing a list of all todos",
-          "link": "todos/viewing_a_list_of_all_todos.json",
+          "description": "Updating an existing record",
+          "link": "todos/updating_an_existing_record.json",
+          "groups": "all"
+        },
+        {
+          "description": "Viewing a list of all completed todos",
+          "link": "todos/viewing_a_list_of_all_completed_todos.json",
+          "groups": "all"
+        },
+        {
+          "description": "Viewing a list of all incomplete todos",
+          "link": "todos/viewing_a_list_of_all_incomplete_todos.json",
           "groups": "all"
         },
         {
