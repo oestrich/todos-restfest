@@ -1,4 +1,8 @@
 class Todo < ActiveRecord::Base
+  def self.incomplete
+    where(:completed_on => nil)
+  end
+
   def complete!
     update(:completed_on => Date.today)
   end

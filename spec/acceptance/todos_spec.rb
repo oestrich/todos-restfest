@@ -14,6 +14,13 @@ resource "Todos" do
   end
 
   get "/todos" do
+    let!(:completed_todo) do
+      Todo.create({
+        :title => "finish my homework again",
+        :completed_on => Date.today,
+      })
+    end
+
     example_request "Viewing a list of all todos" do
       expect(response_body).to be_json_eql({
         "_embedded" => {

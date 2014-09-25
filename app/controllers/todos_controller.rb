@@ -1,6 +1,6 @@
 class TodosController < ApplicationController
   def index
-    render :json => Todo.all, :serializer => TodosSerializer, :each_serializer => TodoSerializer
+    render :json => Todo.incomplete, :serializer => TodosSerializer, :each_serializer => TodoSerializer
   end
 
   def show
