@@ -42,6 +42,12 @@ class TodosController < ApplicationController
     end
   end
 
+  def destroy
+    todo = Todo.find(params[:id])
+    todo.destroy
+    render :nothing => true, :status => 204, :location => todos_url
+  end
+
   def complete
     todo = Todo.find(params[:id])
     todo.complete!

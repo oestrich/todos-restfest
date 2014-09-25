@@ -369,4 +369,36 @@ resource "Todos" do
       }.to_json)
     end
   end
+
+  delete "/todos/:id" do
+    let(:id) { todo.id }
+
+    example_request "Removing a todo" do
+      expect(response_body).to eq("")
+      expect(status).to eq(204)
+
+      client.get(response_headers["Location"])
+
+      expect(response_body).to be_json_eql({
+        "_embedded" => {
+          "todos" => [
+          ],
+        },
+        "_links" => {
+          "curies" => [{
+            "name" => "todos",
+            "href" => "http://todos.smartlogic.io/relations/{rel}",
+            "templated" => true
+          }],
+          "self" => {
+            "href" => todos_url(:host => host, :page => 1, :per_page => 5),
+            "name" => "Incomplete todos",
+          },
+          "up" => {
+            "href" => root_url(:host => host),
+          },
+        }
+      }.to_json)
+    end
+  end
 end
