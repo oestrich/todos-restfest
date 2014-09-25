@@ -154,6 +154,8 @@ resource "Todos" do
     let(:title) { "new title" }
     let(:due_date) { "2014-11-01" }
 
+    let(:raw_post) { params.to_json }
+
     example_request "Creating a new todo" do
       location = response_headers["Location"]
       todo_id = location.split("/").last
@@ -188,6 +190,8 @@ resource "Todos" do
 
     let(:title) { "new title" }
     let(:due_date) { "2014-11-01" }
+
+    let(:raw_post) { params.to_json }
 
     context "todo exists" do
       let(:id) { todo.id }

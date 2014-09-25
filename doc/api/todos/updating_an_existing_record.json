@@ -31,7 +31,7 @@
   "requests": [
     {
       "request_method": "PUT",
-      "request_path": "/todos/fd14985d-a7dd-4b28-ab09-2b444f0f0c8c",
+      "request_path": "/todos/52407c37-c6e5-4bf4-9545-f8f04b1273d4",
       "request_body": "{\"todo\":{\"title\":\"new title\",\"due_date\":\"2014-11-01\"}}",
       "request_headers": {
         "Accept": "application/json",
@@ -42,16 +42,16 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/fd14985d-a7dd-4b28-ab09-2b444f0f0c8c\"},\"todos:complete\":{\"href\":\"http://example.org/todos/fd14985d-a7dd-4b28-ab09-2b444f0f0c8c/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"fd14985d-a7dd-4b28-ab09-2b444f0f0c8c\",\"title\":\"new title\",\"due_date\":\"2014-11-01\",\"notes\":\"calculus will be hard\",\"created_at\":\"2014-09-25T16:29:09.085Z\",\"updated_at\":\"2014-09-25T16:29:09.088Z\",\"completed_on\":null}",
+      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/52407c37-c6e5-4bf4-9545-f8f04b1273d4\"},\"todos:complete\":{\"href\":\"http://example.org/todos/52407c37-c6e5-4bf4-9545-f8f04b1273d4/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"52407c37-c6e5-4bf4-9545-f8f04b1273d4\",\"title\":\"new title\",\"due_date\":\"2014-11-01\",\"notes\":\"calculus will be hard\",\"created_at\":\"2014-09-25T16:31:40.419Z\",\"updated_at\":\"2014-09-25T16:31:40.422Z\",\"completed_on\":null}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"99d2bd62d6702ea481696eea56285491\"",
+        "ETag": "\"4c4fa8e494f4347d5811d466c2777f4d\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "a5cbf19d-8677-4bfb-9d0d-fc7dfe2ebc84",
-        "X-Runtime": "0.004339",
+        "X-Request-Id": "7a9fd182-6755-401f-a7a8-6de42555f436",
+        "X-Runtime": "0.003855",
         "Content-Length": "539"
       },
       "response_content_type": "application/json; charset=utf-8",

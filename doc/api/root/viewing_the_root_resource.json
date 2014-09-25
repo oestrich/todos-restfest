@@ -18,7 +18,6 @@
       "request_headers": {
       },
       "request_query_parameters": {
-        "{}": null
       },
       "request_content_type": null,
       "response_status": 200,
@@ -31,8 +30,8 @@
         "Content-Type": "application/json; charset=utf-8",
         "ETag": "\"62b75742e087c88cb7fef951e40cc291\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "bbe05c2a-dd41-4f4f-aa10-081103904eac",
-        "X-Runtime": "0.005116",
+        "X-Request-Id": "2f8c3a32-02bf-4740-8c20-f2972367d293",
+        "X-Runtime": "0.005081",
         "Content-Length": "393"
       },
       "response_content_type": "application/json; charset=utf-8",

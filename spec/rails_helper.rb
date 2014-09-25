@@ -52,6 +52,5 @@ end
 RspecApiDocumentation.configure do |config|
   config.format = :json
   config.api_name = "Todo"
-  config.post_body_formatter = :json
   config.request_headers_to_include = ["Accept", "Content-Type"]
 end
