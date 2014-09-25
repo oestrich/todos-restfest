@@ -13,7 +13,7 @@
   "requests": [
     {
       "request_method": "POST",
-      "request_path": "/todos/59ebdacd-3a15-4143-9a98-17b1fa18d41c/incomplete",
+      "request_path": "/todos/44fc3603-feb9-4788-ad8f-db6d1fb2f628/incomplete",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
@@ -24,16 +24,16 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/59ebdacd-3a15-4143-9a98-17b1fa18d41c\"},\"todos:complete\":{\"href\":\"http://example.org/todos/59ebdacd-3a15-4143-9a98-17b1fa18d41c/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"59ebdacd-3a15-4143-9a98-17b1fa18d41c\",\"title\":\"finish my homework\",\"due_date\":\"2014-10-01\",\"notes\":\"calculus will be hard\",\"created_at\":\"2014-09-25T16:31:40.439Z\",\"updated_at\":\"2014-09-25T16:31:40.439Z\",\"completed_on\":null}",
+      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/44fc3603-feb9-4788-ad8f-db6d1fb2f628\"},\"todos:complete\":{\"href\":\"http://example.org/todos/44fc3603-feb9-4788-ad8f-db6d1fb2f628/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"44fc3603-feb9-4788-ad8f-db6d1fb2f628\",\"title\":\"finish my homework\",\"due_date\":\"2014-10-01\",\"notes\":\"calculus will be hard\",\"created_at\":\"2014-09-25T17:03:00.621Z\",\"updated_at\":\"2014-09-25T17:03:00.621Z\",\"completed_on\":null}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"7a3190af2223e7e2924e5cc970cf51e6\"",
+        "ETag": "\"feeadad22927c1ab0e48eae37148f00b\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "4a1625af-ddab-4418-8744-f00711cacd1f",
-        "X-Runtime": "0.002451",
+        "X-Request-Id": "412986db-b41b-4182-bff4-4d6d3d87c99f",
+        "X-Runtime": "0.002271",
         "Content-Length": "548"
       },
       "response_content_type": "application/json; charset=utf-8",

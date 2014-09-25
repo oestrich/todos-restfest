@@ -1,10 +1,23 @@
 class TodosController < ApplicationController
   def index
-    render :json => Todo.incomplete, :serializer => TodosSerializer, :each_serializer => TodoSerializer
+    render({
+      :json => Todo.incomplete.page(page).per(per_page),
+      :serializer => TodosSerializer,
+      :each_serializer => TodoSerializer,
+      :page => page,
+      :per_page => per_page,
+    })
   end
 
   def completed
-    render :json => Todo.complete, :serializer => TodosSerializer, :each_serializer => TodoSerializer, :completed => true
+    render({
+      :json => Todo.complete.page(page).per(per_page),
+      :serializer => TodosSerializer,
+      :each_serializer => TodoSerializer,
+      :completed => true,
+      :page => page,
+      :per_page => per_page,
+    })
   end
 
   def show

@@ -6,6 +6,7 @@ gem 'rails', '4.1.6'
 
 gem 'active_model_serializers', '~> 0.8.0'
 gem 'dotenv'
+gem 'kaminari'
 gem 'pg'
 gem 'raddocs'
 
@@ -15,6 +16,7 @@ end
 
 group :development do
   gem 'foreman'
+  gem 'pry-rails'
   gem 'spring'
 end
 

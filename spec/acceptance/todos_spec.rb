@@ -14,12 +14,18 @@ resource "Todos" do
   end
 
   get "/todos" do
+    parameter :page, "Current page"
+    parameter :per_page, "Number of todos to load per page"
+
     let!(:completed_todo) do
       Todo.create({
         :title => "finish my homework again",
         :completed_on => Date.today,
       })
     end
+    let!(:todo_2) { Todo.create(:title => "second page") }
+
+    let(:per_page) { 1 }
 
     example_request "Viewing a list of all incomplete todos" do
       expect(response_body).to be_json_eql({
@@ -54,18 +60,24 @@ resource "Todos" do
             "templated" => true
           }],
           "self" => {
-            "href" => todos_url(:host => host),
+            "href" => todos_url(:host => host, :page => 1, :per_page => 1),
             "name" => "Incomplete todos",
           },
           "up" => {
             "href" => root_url(:host => host),
           },
+          "next" => {
+            "href" => todos_url(:host => host, :page => 2, :per_page => 1),
+          }
         }
       }.to_json)
     end
   end
 
   get "/todos/completed" do
+    parameter :page, "Current page"
+    parameter :per_page, "Number of todos to load per page"
+
     let!(:completed_todo) do
       Todo.create({
         :title => "finish my homework again",
@@ -106,7 +118,7 @@ resource "Todos" do
             "templated" => true
           }],
           "self" => {
-            "href" => completed_todos_url(:host => host),
+            "href" => completed_todos_url(:host => host, :page => 1, :per_page => 5),
             "name" => "Completed todos",
           },
           "up" => {

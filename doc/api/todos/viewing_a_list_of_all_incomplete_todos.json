@@ -5,7 +5,14 @@
   "description": "Viewing a list of all incomplete todos",
   "explanation": null,
   "parameters": [
-
+    {
+      "name": "page",
+      "description": "Current page"
+    },
+    {
+      "name": "per_page",
+      "description": "Number of todos to load per page"
+    }
   ],
   "response_fields": [
 
@@ -13,28 +20,29 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/todos",
+      "request_path": "/todos?per_page=1",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json"
       },
       "request_query_parameters": {
+        "per_page": "1"
       },
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"_embedded\":{\"todos\":[{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/b8c9b26a-aaa4-42f3-87ae-f68f26f67af9\"},\"todos:complete\":{\"href\":\"http://example.org/todos/b8c9b26a-aaa4-42f3-87ae-f68f26f67af9/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"b8c9b26a-aaa4-42f3-87ae-f68f26f67af9\",\"title\":\"finish my homework\",\"due_date\":\"2014-10-01\",\"notes\":\"calculus will be hard\",\"created_at\":\"2014-09-25T16:31:40.387Z\",\"updated_at\":\"2014-09-25T16:31:40.387Z\",\"completed_on\":null}]},\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"up\":{\"href\":\"http://example.org/\"},\"self\":{\"href\":\"http://example.org/todos\",\"name\":\"Incomplete todos\"}}}",
+      "response_body": "{\"_embedded\":{\"todos\":[{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/4db4f368-d603-4fe1-9f3c-2730a2f8da14\"},\"todos:complete\":{\"href\":\"http://example.org/todos/4db4f368-d603-4fe1-9f3c-2730a2f8da14/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"4db4f368-d603-4fe1-9f3c-2730a2f8da14\",\"title\":\"finish my homework\",\"due_date\":\"2014-10-01\",\"notes\":\"calculus will be hard\",\"created_at\":\"2014-09-25T17:03:00.562Z\",\"updated_at\":\"2014-09-25T17:03:00.562Z\",\"completed_on\":null}]},\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"up\":{\"href\":\"http://example.org/\"},\"next\":{\"href\":\"http://example.org/todos?page=2\\u0026per_page=1\"},\"self\":{\"href\":\"http://example.org/todos?page=1\\u0026per_page=1\",\"name\":\"Incomplete todos\"}}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"2f2278da3865a2de680d6cf8bfdec00b\"",
+        "ETag": "\"3894a43b04980b5bdf3a88a667dab7f8\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "7e87c8e9-75e9-4fff-aaf1-8b9ce25f0b59",
-        "X-Runtime": "0.007208",
-        "Content-Length": "787"
+        "X-Request-Id": "12dfee6b-471b-4c52-8069-f063cd49300b",
+        "X-Runtime": "0.010119",
+        "Content-Length": "876"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
