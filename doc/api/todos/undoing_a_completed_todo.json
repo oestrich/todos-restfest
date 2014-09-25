@@ -1,0 +1,43 @@
+{
+  "resource": "Todos",
+  "http_method": "POST",
+  "route": "/todos/:id/incomplete",
+  "description": "Undoing a completed todo",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/todos/b7e7d59c-d242-404c-959c-1c50e74bca24/incomplete",
+      "request_body": "{}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/b7e7d59c-d242-404c-959c-1c50e74bca24\"},\"todos:complete\":{\"href\":\"http://example.org/todos/b7e7d59c-d242-404c-959c-1c50e74bca24/complete\"}},\"id\":\"b7e7d59c-d242-404c-959c-1c50e74bca24\",\"title\":\"finish my homework\",\"due_date\":\"2014-10-01\",\"notes\":\"calculus will be hard\",\"created_at\":\"2014-09-25T15:11:26.929Z\",\"updated_at\":\"2014-09-25T15:11:26.929Z\",\"completed_on\":null}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"ba2b63aac15b9a28a809a45c28c40348\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "8a830126-bd0c-46d3-a34c-b1d6b868d3af",
+        "X-Runtime": "0.002257",
+        "Content-Length": "517"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

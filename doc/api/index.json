@@ -14,8 +14,18 @@
       "name": "Todos",
       "examples": [
         {
+          "description": "Completing a todo",
+          "link": "todos/completing_a_todo.json",
+          "groups": "all"
+        },
+        {
           "description": "Creating a new todo",
           "link": "todos/creating_a_new_todo.json",
+          "groups": "all"
+        },
+        {
+          "description": "Undoing a completed todo",
+          "link": "todos/undoing_a_completed_todo.json",
           "groups": "all"
         },
         {

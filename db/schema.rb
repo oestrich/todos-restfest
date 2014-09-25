@@ -18,9 +18,10 @@ ActiveRecord::Schema.define(version: 20140925141652) do
   enable_extension "uuid-ossp"
 
   create_table "todos", id: :uuid, default: "uuid_generate_v4()", force: true do |t|
-    t.string   "title",      null: false
-    t.date     "due_date",   null: false
+    t.string   "title",        null: false
+    t.date     "due_date"
     t.text     "notes"
+    t.date     "completed_on"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

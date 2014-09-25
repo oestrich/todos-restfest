@@ -13,6 +13,18 @@ class TodosController < ApplicationController
     render :json => todo, :serializer => TodoSerializer, :status => 201, :location => todo_url(todo)
   end
 
+  def complete
+    todo = Todo.find(params[:id])
+    todo.complete!
+    render :json => todo, :serializer => TodoSerializer
+  end
+
+  def incomplete
+    todo = Todo.find(params[:id])
+    todo.incomplete!
+    render :json => todo, :serializer => TodoSerializer
+  end
+
   private
 
   def todo_params

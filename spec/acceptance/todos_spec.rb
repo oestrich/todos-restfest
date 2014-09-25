@@ -22,6 +22,7 @@ resource "Todos" do
               "title" => "finish my homework",
               "due_date" => "2014-10-01",
               "notes" => "calculus will be hard",
+              "completed_on" => nil,
               "_links" => {
                 "curies" => [{
                   "name" => "todos",
@@ -30,6 +31,9 @@ resource "Todos" do
                 }],
                 "self" => {
                   "href" => todo_url(todo.id, :host => host),
+                },
+                "todos:complete" => {
+                  "href" => complete_todo_url(todo.id, :host => host),
                 },
               },
             },
@@ -59,6 +63,7 @@ resource "Todos" do
         "title" => "finish my homework",
         "due_date" => "2014-10-01",
         "notes" => "calculus will be hard",
+        "completed_on" => nil,
         "_links" => {
           "curies" => [{
             "name" => "todos",
@@ -68,6 +73,9 @@ resource "Todos" do
           "self" => {
             "href" => todo_url(todo.id, :host => host),
           },
+          "todos:complete" => {
+            "href" => complete_todo_url(todo.id, :host => host),
+          },
         },
       }.to_json)
     end
@@ -75,7 +83,7 @@ resource "Todos" do
 
   post "/todos" do
     parameter :title, "Title of todo", "Type" => "string", :scope => "todo", :required => true
-    parameter :due_date, "Date todo is due", "Type" => "date", :scope => "todo", :required => true
+    parameter :due_date, "Date todo is due", "Type" => "date", :scope => "todo"
     parameter :notes, "Extra notes for the todo", "Type" => "string", :scope => "todo"
 
     let(:title) { "new title" }
@@ -83,10 +91,12 @@ resource "Todos" do
 
     example_request "Creating a new todo" do
       location = response_headers["Location"]
+      todo_id = location.split("/").last
       expect(response_body).to be_json_eql({
         "title" => "new title",
         "due_date" => "2014-11-01",
         "notes" => nil,
+        "completed_on" => nil,
         "_links" => {
           "curies" => [{
             "name" => "todos",
@@ -95,9 +105,65 @@ resource "Todos" do
           }],
           "self" => {
             "href" => location,
-          }
+          },
+          "todos:complete" => {
+            "href" => complete_todo_url(todo_id, :host => host),
+          },
         },
       }.to_json).excluding("_links/self/href")
+      expect(status).to eq(201)
+    end
+  end
+
+  post "/todos/:id/complete" do
+    let(:id) { todo.id }
+
+    example_request "Completing a todo" do
+      expect(response_body).to be_json_eql({
+        "title" => "finish my homework",
+        "due_date" => "2014-10-01",
+        "notes" => "calculus will be hard",
+        "completed_on" => Date.today,
+        "_links" => {
+          "curies" => [{
+            "name" => "todos",
+            "href" => "http://todos.smartlogic.io/relations/{rel}",
+            "templated" => true
+          }],
+          "self" => {
+            "href" => todo_url(todo.id, :host => host),
+          },
+          "todos:incomplete" => {
+            "href" => incomplete_todo_url(todo.id, :host => host),
+          },
+        },
+      }.to_json)
+    end
+  end
+
+  post "/todos/:id/incomplete" do
+    let(:id) { todo.id }
+
+    example_request "Undoing a completed todo" do
+      expect(response_body).to be_json_eql({
+        "title" => "finish my homework",
+        "due_date" => "2014-10-01",
+        "notes" => "calculus will be hard",
+        "completed_on" => nil,
+        "_links" => {
+          "curies" => [{
+            "name" => "todos",
+            "href" => "http://todos.smartlogic.io/relations/{rel}",
+            "templated" => true
+          }],
+          "self" => {
+            "href" => todo_url(todo.id, :host => host),
+          },
+          "todos:complete" => {
+            "href" => complete_todo_url(todo.id, :host => host),
+          },
+        },
+      }.to_json)
     end
   end
 end

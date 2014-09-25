@@ -15,7 +15,6 @@
     {
       "Type": "date",
       "scope": "todo",
-      "required": true,
       "name": "due_date",
       "description": "Date todo is due"
     },
@@ -43,17 +42,18 @@
       "request_content_type": "application/json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}]},\"id\":\"73f87964-7103-4492-9f96-a146bf4b6009\",\"title\":\"new title\",\"due_date\":\"2014-11-01\",\"notes\":null,\"created_at\":\"2014-09-25T14:50:07.520Z\",\"updated_at\":\"2014-09-25T14:50:07.520Z\"}",
+      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/1944b72d-de4e-416d-bbba-35502fb06119\"},\"todos:complete\":{\"href\":\"http://example.org/todos/1944b72d-de4e-416d-bbba-35502fb06119/complete\"}},\"id\":\"1944b72d-de4e-416d-bbba-35502fb06119\",\"title\":\"new title\",\"due_date\":\"2014-11-01\",\"notes\":null,\"created_at\":\"2014-09-25T15:11:26.917Z\",\"updated_at\":\"2014-09-25T15:11:26.917Z\",\"completed_on\":null}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
+        "Location": "http://example.org/todos/1944b72d-de4e-416d-bbba-35502fb06119",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"4bbc5fdd3259a92fd6e3fb0d3703cdeb\"",
+        "ETag": "\"c9c0ea1b4b99099f2b3f1f7108af76cc\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "b0914f0b-8b93-4966-8834-c69e9053427c",
-        "X-Runtime": "0.002413",
-        "Content-Length": "290"
+        "X-Request-Id": "5858004e-19e8-4f42-80d2-748aa90b615b",
+        "X-Runtime": "0.003182",
+        "Content-Length": "489"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

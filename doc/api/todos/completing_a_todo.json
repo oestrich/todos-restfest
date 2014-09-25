@@ -1,0 +1,43 @@
+{
+  "resource": "Todos",
+  "http_method": "POST",
+  "route": "/todos/:id/complete",
+  "description": "Completing a todo",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/todos/f7cbbd22-b817-4009-b54e-cd464bb316a2/complete",
+      "request_body": "{}",
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/f7cbbd22-b817-4009-b54e-cd464bb316a2\"},\"todos:incomplete\":{\"href\":\"http://example.org/todos/f7cbbd22-b817-4009-b54e-cd464bb316a2/incomplete\"}},\"id\":\"f7cbbd22-b817-4009-b54e-cd464bb316a2\",\"title\":\"finish my homework\",\"due_date\":\"2014-10-01\",\"notes\":\"calculus will be hard\",\"created_at\":\"2014-09-25T15:11:26.923Z\",\"updated_at\":\"2014-09-25T15:11:26.926Z\",\"completed_on\":\"2014-09-25\"}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"2245f430aea49e70ee429d1dd02332bd\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "40863bf4-5ada-4dfb-8846-9b218b2112c0",
+        "X-Runtime": "0.003536",
+        "Content-Length": "529"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
