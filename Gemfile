@@ -2,6 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.6'
 
+gem 'active_model_serializers', '~> 0.8.0'
 gem 'pg'
 gem 'raddocs'
 
