@@ -9,6 +9,7 @@ gem 'dotenv'
 gem 'kaminari'
 gem 'pg'
 gem 'raddocs'
+gem 'thin'
 
 group :production do
   gem 'rails_12factor'
