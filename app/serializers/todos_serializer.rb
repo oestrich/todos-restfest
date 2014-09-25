@@ -12,6 +12,9 @@ class TodosSerializer < ActiveModel::ArraySerializer
         "href" => "http://todos.smartlogic.io/relations/{rel}",
         "templated" => true
       }],
+      "up" => {
+        "href" => root_url,
+      }
     }
 
     if @options[:completed]

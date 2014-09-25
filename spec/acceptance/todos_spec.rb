@@ -55,6 +55,9 @@ resource "Todos" do
           "self" => {
             "href" => todos_url(:host => host),
           },
+          "up" => {
+            "href" => root_url(:host => host),
+          },
         }
       }.to_json)
     end
@@ -101,6 +104,9 @@ resource "Todos" do
           }],
           "self" => {
             "href" => completed_todos_url(:host => host),
+          },
+          "up" => {
+            "href" => root_url(:host => host),
           },
         }
       }.to_json)
