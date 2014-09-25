@@ -9,6 +9,16 @@
           "groups": "all"
         }
       ]
+    },
+    {
+      "name": "Todos",
+      "examples": [
+        {
+          "description": "Viewing a list of all todos",
+          "link": "todos/viewing_a_list_of_all_todos.json",
+          "groups": "all"
+        }
+      ]
     }
   ]
 }

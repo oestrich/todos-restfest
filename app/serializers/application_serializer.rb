@@ -10,10 +10,10 @@ module ApplicationSerializer
   def _links
     {
       "curies" =>  [{
-        "name" =>  "todo",
-        "href" =>  "http://todo.smartlogic.io/relations/{rel}",
+        "name" =>  "todos",
+        "href" =>  "http://todos.smartlogic.io/relations/{rel}",
         "templated" => true
-      }]
+      }],
     }
   end
 end

@@ -9,8 +9,8 @@ resource "Root" do
       expect(response_body).to be_json_eql({
         "_links" => {
           "curies" => [{
-            "name" => "todo",
-            "href" => "http://todo.smartlogic.io/relations/{rel}",
+            "name" => "todos",
+            "href" => "http://todos.smartlogic.io/relations/{rel}",
             "templated" => true
           }],
           "self" => {

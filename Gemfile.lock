@@ -129,6 +129,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers (~> 0.8.0)
+  dotenv
   foreman
   json_spec
   pg

@@ -1,4 +1,9 @@
+require 'dotenv'
+Dotenv.load
+
 Rails.application.configure do
+   config.action_controller.default_url_options = { :host => "#{ENV["TODO_API_HOST"]}:#{ENV["TODO_API_PORT"]}" }
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on

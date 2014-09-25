@@ -24,17 +24,17 @@
       "request_content_type": null,
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todo\",\"href\":\"http://todo.smartlogic.io/relations/{rel}\",\"templated\":true}]}}",
+      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/\"}}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"c1cbdf9a5f1240bc91e6bb6592f6a73e\"",
+        "ETag": "\"bac6e1d158bfe0eda52e1d85036e81c4\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "c9e38b6f-6eb3-4b1f-a9c7-c942df4c7e61",
-        "X-Runtime": "0.004997",
-        "Content-Length": "107"
+        "X-Request-Id": "1df25679-081d-40cd-bcfd-d8a5466138b0",
+        "X-Runtime": "0.004643",
+        "Content-Length": "147"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

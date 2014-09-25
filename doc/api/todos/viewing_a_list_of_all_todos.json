@@ -1,0 +1,43 @@
+{
+  "resource": "Todos",
+  "http_method": "GET",
+  "route": "/todos",
+  "description": "Viewing a list of all todos",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/todos",
+      "request_body": null,
+      "request_headers": {
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"_embedded\":{\"todos\":[{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}]},\"id\":\"aad22072-7c5b-4b18-8c89-333007219d1e\",\"title\":\"finish my homework\",\"due_date\":\"2014-10-01\",\"notes\":\"calculus will be hard\",\"created_at\":\"2014-09-25T14:27:51.722Z\",\"updated_at\":\"2014-09-25T14:27:51.722Z\"}]},\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos\"}}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"24a36819bb0521565d6e93aaf5e1ea25\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "64072d3e-2264-40aa-9d04-88c58965f814",
+        "X-Runtime": "0.004496",
+        "Content-Length": "495"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}
