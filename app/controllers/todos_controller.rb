@@ -17,6 +17,18 @@ class TodosController < ApplicationController
     render :json => todo, :serializer => TodoSerializer, :status => 201, :location => todo_url(todo)
   end
 
+  def update
+    todo = Todo.where(:id => params[:id]).first
+
+    if todo
+      todo.update(todo_params)
+      render :json => todo, :serializer => TodoSerializer
+    else
+      todo = Todo.create(todo_params.merge(:id => params[:id]))
+      render :json => todo, :serializer => TodoSerializer, :status => 201
+    end
+  end
+
   def complete
     todo = Todo.find(params[:id])
     todo.complete!

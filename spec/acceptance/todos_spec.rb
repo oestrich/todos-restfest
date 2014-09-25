@@ -181,6 +181,70 @@ resource "Todos" do
     end
   end
 
+  put "/todos/:id" do
+    parameter :title, "Title of todo", "Type" => "string", :scope => "todo", :required => true
+    parameter :due_date, "Date todo is due", "Type" => "date", :scope => "todo"
+    parameter :notes, "Extra notes for the todo", "Type" => "string", :scope => "todo"
+
+    let(:title) { "new title" }
+    let(:due_date) { "2014-11-01" }
+
+    context "todo exists" do
+      let(:id) { todo.id }
+
+      example_request "Updating an existing record" do
+        expect(response_body).to be_json_eql({
+          "title" => "new title",
+          "due_date" => "2014-11-01",
+          "notes" => "calculus will be hard",
+          "completed_on" => nil,
+          "_links" => {
+            "curies" => [{
+              "name" => "todos",
+              "href" => "http://todos.smartlogic.io/relations/{rel}",
+              "templated" => true
+            }],
+            "self" => {
+              "href" => todo_url(todo, :host => host),
+            },
+            "todos:complete" => {
+              "href" => complete_todo_url(todo.id, :host => host),
+              "name" => "Mark todo as complete",
+            },
+          },
+        }.to_json).excluding("_links/self/href")
+      end
+    end
+
+    context "todo does not exist" do
+      let(:id) { SecureRandom.uuid }
+
+      example_request "Creating a new todo with a given id" do
+        expect(response_body).to be_json_eql({
+          "title" => "new title",
+          "due_date" => "2014-11-01",
+          "notes" => nil,
+          "completed_on" => nil,
+          "_links" => {
+            "curies" => [{
+              "name" => "todos",
+              "href" => "http://todos.smartlogic.io/relations/{rel}",
+              "templated" => true
+            }],
+            "self" => {
+              "href" => todo_url(id, :host => host),
+            },
+            "todos:complete" => {
+              "href" => complete_todo_url(id, :host => host),
+              "name" => "Mark todo as complete",
+            },
+          },
+        }.to_json).excluding("_links/self/href")
+        expect(status).to eq(201)
+      end
+    end
+  end
+
   post "/todos/:id/complete" do
     let(:id) { todo.id }
 
