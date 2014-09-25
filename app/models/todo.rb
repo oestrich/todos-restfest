@@ -1,4 +1,7 @@
 class Todo < ActiveRecord::Base
+  has_many :categorizations
+  has_many :categories, :through => :categorizations
+
   def self.incomplete
     where(:completed_on => nil)
   end

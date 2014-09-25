@@ -26,6 +26,10 @@ resource "Root" do
             "href" => "#{completed_todos_url(:host => host)}{?page,per_page}",
             "name" => "Completed todos",
           },
+          "todos:categories" => {
+            "href" => categories_url(:host => host),
+            "name" => "Categories",
+          },
           "todos:docs" => {
             "href" => docs_url(:host => host),
             "name" => "Human documentation",

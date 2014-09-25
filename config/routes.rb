@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :categories, :only => [:index, :show], :format => false
+
   resources :todos, :only => [:index, :show, :create, :update], :format => false do
     collection do
       get :completed
