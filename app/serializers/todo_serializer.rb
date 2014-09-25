@@ -23,6 +23,12 @@ class TodoSerializer < ActiveModel::Serializer
       "href" => todo_url(id)
     }
 
+    if @options[:expanded_links]
+      hash["up"] = {
+        "href" => todos_url,
+      }
+    end
+
     if todo.completed?
       hash["todos:incomplete"] = {
         "href" => incomplete_todo_url(todo),
@@ -48,5 +54,13 @@ class TodoSerializer < ActiveModel::Serializer
 
   def todo
     @object
+  end
+
+  def todos_url(*args)
+    if todo.completed?
+      completed_todos_url(*args)
+    else
+      super(*args)
+    end
   end
 end

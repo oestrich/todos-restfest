@@ -165,6 +165,9 @@ resource "Todos" do
           "self" => {
             "href" => todo_url(todo.id, :host => host),
           },
+          "up" => {
+            "href" => todos_url(:host => host),
+          },
           "todos:complete" => {
             "href" => complete_todo_url(todo.id, :host => host),
             "name" => "Mark todo as complete",

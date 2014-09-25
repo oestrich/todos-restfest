@@ -22,7 +22,7 @@ class TodosController < ApplicationController
 
   def show
     todo = Todo.find(params[:id])
-    render :json => todo, :serializer => TodoSerializer
+    render :json => todo, :serializer => TodoSerializer, :expanded_links => true
   end
 
   def create
