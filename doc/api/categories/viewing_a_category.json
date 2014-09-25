@@ -13,7 +13,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/categories/5f48d010-394c-4885-8cf3-f5ccb5051655",
+      "request_path": "/categories/cbd2274c-d7aa-4232-b54d-07c130163cf8",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
@@ -24,20 +24,20 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/categories/5f48d010-394c-4885-8cf3-f5ccb5051655\"}},\"id\":\"5f48d010-394c-4885-8cf3-f5ccb5051655\",\"name\":\"Work\",\"created_at\":\"2014-09-25T18:39:20.078Z\",\"updated_at\":\"2014-09-25T18:39:20.078Z\"}",
+      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/categories/cbd2274c-d7aa-4232-b54d-07c130163cf8\"}},\"id\":\"cbd2274c-d7aa-4232-b54d-07c130163cf8\",\"name\":\"Work\",\"created_at\":\"2014-09-25T18:45:30.134Z\",\"updated_at\":\"2014-09-25T18:45:30.134Z\"}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"a79aab15750d87dd0aef388b28380c19\"",
+        "ETag": "\"630d3d4549c6159acb8e087b509ca58d\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "eac50db7-c391-4819-aa0c-cd5afc9baedd",
-        "X-Runtime": "0.002850",
+        "X-Request-Id": "29c91937-9091-460b-943a-d610ece3a28d",
+        "X-Runtime": "0.003320",
         "Content-Length": "332"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": null
+      "curl": "curl \"todos.oestri.ch/categories/cbd2274c-d7aa-4232-b54d-07c130163cf8\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\""
     }
   ]
 }

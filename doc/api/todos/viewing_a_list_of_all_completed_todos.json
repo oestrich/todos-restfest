@@ -31,20 +31,20 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"_embedded\":{\"todos\":[{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/6d967ff5-44b4-4052-b859-0ab8bc2bea5d\"},\"todos:incomplete\":{\"href\":\"http://example.org/todos/6d967ff5-44b4-4052-b859-0ab8bc2bea5d/incomplete\",\"name\":\"Mark todo as incomplete\"}},\"id\":\"6d967ff5-44b4-4052-b859-0ab8bc2bea5d\",\"title\":\"finish my homework again\",\"due_date\":null,\"notes\":null,\"created_at\":\"2014-09-25T18:39:20.190Z\",\"updated_at\":\"2014-09-25T18:39:20.190Z\",\"completed_on\":\"2014-09-25\",\"_embedded\":{\"categories\":[]}}]},\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"up\":{\"href\":\"http://example.org/\"},\"self\":{\"href\":\"http://example.org/todos/completed?page=1\\u0026per_page=5\",\"name\":\"Completed todos\"}}}",
+      "response_body": "{\"_embedded\":{\"todos\":[{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/b60fe3b7-0779-4047-a9a0-255a78e037a3\"},\"todos:incomplete\":{\"href\":\"http://example.org/todos/b60fe3b7-0779-4047-a9a0-255a78e037a3/incomplete\",\"name\":\"Mark todo as incomplete\"}},\"id\":\"b60fe3b7-0779-4047-a9a0-255a78e037a3\",\"title\":\"finish my homework again\",\"due_date\":null,\"notes\":null,\"created_at\":\"2014-09-25T18:45:30.247Z\",\"updated_at\":\"2014-09-25T18:45:30.247Z\",\"completed_on\":\"2014-09-25\",\"_embedded\":{\"categories\":[]}}]},\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"up\":{\"href\":\"http://example.org/\"},\"self\":{\"href\":\"http://example.org/todos/completed?page=1\\u0026per_page=5\",\"name\":\"Completed todos\"}}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"e3af5bafb87a83423adc15bc2c83a7e2\"",
+        "ETag": "\"601f0c7319b781f1d86af9feb350e462\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "dab72421-466f-420a-959c-0f49292e019d",
-        "X-Runtime": "0.003838",
+        "X-Request-Id": "5290035b-94f9-4e19-ba83-9d1e546c6487",
+        "X-Runtime": "0.003999",
         "Content-Length": "842"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": null
+      "curl": "curl \"todos.oestri.ch/todos/completed\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\""
     }
   ]
 }

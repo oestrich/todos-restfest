@@ -13,7 +13,7 @@
   "requests": [
     {
       "request_method": "GET",
-      "request_path": "/todos/ee41d9bc-8cdc-4bfd-bb2f-2e296d83e094",
+      "request_path": "/todos/e1afb9f6-ef84-4ed8-afed-9cc64bf83a25",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
@@ -24,20 +24,20 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/ee41d9bc-8cdc-4bfd-bb2f-2e296d83e094\"},\"up\":{\"href\":\"http://example.org/todos\"},\"todos:complete\":{\"href\":\"http://example.org/todos/ee41d9bc-8cdc-4bfd-bb2f-2e296d83e094/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"ee41d9bc-8cdc-4bfd-bb2f-2e296d83e094\",\"title\":\"finish my homework\",\"due_date\":\"2014-10-01\",\"notes\":\"calculus will be hard\",\"created_at\":\"2014-09-25T18:39:20.198Z\",\"updated_at\":\"2014-09-25T18:39:20.198Z\",\"completed_on\":null,\"_embedded\":{\"categories\":[]}}",
+      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/e1afb9f6-ef84-4ed8-afed-9cc64bf83a25\"},\"up\":{\"href\":\"http://example.org/todos\"},\"todos:complete\":{\"href\":\"http://example.org/todos/e1afb9f6-ef84-4ed8-afed-9cc64bf83a25/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"e1afb9f6-ef84-4ed8-afed-9cc64bf83a25\",\"title\":\"finish my homework\",\"due_date\":\"2014-10-01\",\"notes\":\"calculus will be hard\",\"created_at\":\"2014-09-25T18:45:30.255Z\",\"updated_at\":\"2014-09-25T18:45:30.255Z\",\"completed_on\":null,\"_embedded\":{\"categories\":[]}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"ec9cbf47987012b7a83cbbd4fff23a89\"",
+        "ETag": "\"4c3ab07d030140a4dab259ee1a72692a\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "3933c86f-da7e-4032-9b85-e0cc97cf90f5",
-        "X-Runtime": "0.003023",
+        "X-Request-Id": "83bb84a6-3113-4f45-a039-90cca3166087",
+        "X-Runtime": "0.003539",
         "Content-Length": "619"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": null
+      "curl": "curl \"todos.oestri.ch/todos/e1afb9f6-ef84-4ed8-afed-9cc64bf83a25\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\""
     }
   ]
 }

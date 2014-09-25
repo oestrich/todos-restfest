@@ -13,7 +13,7 @@
   "requests": [
     {
       "request_method": "DELETE",
-      "request_path": "/categories/cce9deb7-a10c-40ff-9816-ba04241977d9",
+      "request_path": "/categories/835000af-e2c5-456a-bd7a-f801146cc498",
       "request_body": null,
       "request_headers": {
         "Accept": "application/json",
@@ -31,11 +31,11 @@
         "X-Content-Type-Options": "nosniff",
         "Location": "http://example.org/categories",
         "Cache-Control": "no-cache",
-        "X-Request-Id": "ad26441e-ce58-44f0-8423-8f30621289e7",
-        "X-Runtime": "0.015278"
+        "X-Request-Id": "907dec30-0dfc-450d-ba49-99ee8cff32b9",
+        "X-Runtime": "0.041828"
       },
       "response_content_type": null,
-      "curl": null
+      "curl": "curl \"todos.oestri.ch/categories/835000af-e2c5-456a-bd7a-f801146cc498\" -d '' -X DELETE \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\""
     },
     {
       "request_method": "GET",
@@ -56,12 +56,12 @@
         "Content-Type": "application/json; charset=utf-8",
         "ETag": "\"ac1d40226c1b39b510378d68f1b1eb19\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "ff63b618-0358-4c6c-b889-0fe67a2f21c3",
-        "X-Runtime": "0.001876",
+        "X-Request-Id": "dbfd2c73-4e6f-4f8c-b1f3-2fffa49d0411",
+        "X-Runtime": "0.001756",
         "Content-Length": "243"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": null
+      "curl": "curl \"todos.oestri.chhttp://example.org/categories\" -X GET "
     }
   ]
 }

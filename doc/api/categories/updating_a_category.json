@@ -19,7 +19,7 @@
   "requests": [
     {
       "request_method": "PUT",
-      "request_path": "/categories/364ae052-c16e-4690-aed5-43e290ea56d3",
+      "request_path": "/categories/08b5eadd-a899-4cce-9c7d-279a1851e8c5",
       "request_body": "{\"category\":{\"name\":\"School\"}}",
       "request_headers": {
         "Accept": "application/json",
@@ -30,20 +30,20 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/categories/364ae052-c16e-4690-aed5-43e290ea56d3\"}},\"id\":\"364ae052-c16e-4690-aed5-43e290ea56d3\",\"name\":\"School\",\"created_at\":\"2014-09-25T18:39:20.090Z\",\"updated_at\":\"2014-09-25T18:39:20.093Z\"}",
+      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/categories/08b5eadd-a899-4cce-9c7d-279a1851e8c5\"}},\"id\":\"08b5eadd-a899-4cce-9c7d-279a1851e8c5\",\"name\":\"School\",\"created_at\":\"2014-09-25T18:45:30.147Z\",\"updated_at\":\"2014-09-25T18:45:30.150Z\"}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"87518d13123375e5604a4104c95da780\"",
+        "ETag": "\"00749e788b7e05fa9c5b830cdd6bbc02\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "c280b131-2760-459f-94fa-ffe4dafadcc6",
-        "X-Runtime": "0.003469",
+        "X-Request-Id": "34370443-4b99-4e09-a409-c1bea160fa70",
+        "X-Runtime": "0.003624",
         "Content-Length": "334"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": null
+      "curl": "curl \"todos.oestri.ch/categories/08b5eadd-a899-4cce-9c7d-279a1851e8c5\" -d '{\"category\":{\"name\":\"School\"}}' -X PUT \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\""
     }
   ]
 }

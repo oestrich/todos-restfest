@@ -32,20 +32,20 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"_embedded\":{\"todos\":[{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/ea4fb9a6-271b-4df6-bb31-e5d761bba6a3\"},\"todos:complete\":{\"href\":\"http://example.org/todos/ea4fb9a6-271b-4df6-bb31-e5d761bba6a3/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"ea4fb9a6-271b-4df6-bb31-e5d761bba6a3\",\"title\":\"finish my homework\",\"due_date\":\"2014-10-01\",\"notes\":\"calculus will be hard\",\"created_at\":\"2014-09-25T18:39:20.161Z\",\"updated_at\":\"2014-09-25T18:39:20.161Z\",\"completed_on\":null,\"_embedded\":{\"categories\":[]}}]},\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"up\":{\"href\":\"http://example.org/\"},\"next\":{\"href\":\"http://example.org/todos?page=2\\u0026per_page=1\"},\"self\":{\"href\":\"http://example.org/todos?page=1\\u0026per_page=1\",\"name\":\"Incomplete todos\"}}}",
+      "response_body": "{\"_embedded\":{\"todos\":[{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/5017579b-e21f-4dab-972d-8d98bab23fec\"},\"todos:complete\":{\"href\":\"http://example.org/todos/5017579b-e21f-4dab-972d-8d98bab23fec/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"5017579b-e21f-4dab-972d-8d98bab23fec\",\"title\":\"finish my homework\",\"due_date\":\"2014-10-01\",\"notes\":\"calculus will be hard\",\"created_at\":\"2014-09-25T18:45:30.217Z\",\"updated_at\":\"2014-09-25T18:45:30.217Z\",\"completed_on\":null,\"_embedded\":{\"categories\":[]}}]},\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"up\":{\"href\":\"http://example.org/\"},\"next\":{\"href\":\"http://example.org/todos?page=2\\u0026per_page=1\"},\"self\":{\"href\":\"http://example.org/todos?page=1\\u0026per_page=1\",\"name\":\"Incomplete todos\"}}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"18cd7ab65ec01153b2332629ee22e0bc\"",
+        "ETag": "\"23c23581ab8d1c15acab5fced54877f8\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "9c689e0b-eb21-417e-bf94-959e5879d036",
-        "X-Runtime": "0.016960",
+        "X-Request-Id": "00621ffa-0d55-4922-a64a-76ba8c8f6138",
+        "X-Runtime": "0.018282",
         "Content-Length": "906"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": null
+      "curl": "curl \"todos.oestri.ch/todos?per_page=1\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\""
     }
   ]
 }

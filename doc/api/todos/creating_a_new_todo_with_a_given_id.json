@@ -37,7 +37,7 @@
   "requests": [
     {
       "request_method": "PUT",
-      "request_path": "/todos/4e02b533-b1c8-453c-ab23-1d669401c7c4",
+      "request_path": "/todos/792eecd7-3082-423c-94f8-52b4196dc5b0",
       "request_body": "{\"todo\":{\"title\":\"new title\",\"due_date\":\"2014-11-01\"}}",
       "request_headers": {
         "Accept": "application/json",
@@ -48,20 +48,20 @@
       "request_content_type": "application/json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/4e02b533-b1c8-453c-ab23-1d669401c7c4\"},\"todos:complete\":{\"href\":\"http://example.org/todos/4e02b533-b1c8-453c-ab23-1d669401c7c4/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"4e02b533-b1c8-453c-ab23-1d669401c7c4\",\"title\":\"new title\",\"due_date\":\"2014-11-01\",\"notes\":null,\"created_at\":\"2014-09-25T18:39:20.235Z\",\"updated_at\":\"2014-09-25T18:39:20.235Z\",\"completed_on\":null,\"_embedded\":{\"categories\":[]}}",
+      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/792eecd7-3082-423c-94f8-52b4196dc5b0\"},\"todos:complete\":{\"href\":\"http://example.org/todos/792eecd7-3082-423c-94f8-52b4196dc5b0/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"792eecd7-3082-423c-94f8-52b4196dc5b0\",\"title\":\"new title\",\"due_date\":\"2014-11-01\",\"notes\":null,\"created_at\":\"2014-09-25T18:45:30.293Z\",\"updated_at\":\"2014-09-25T18:45:30.293Z\",\"completed_on\":null,\"_embedded\":{\"categories\":[]}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"df1f3c02dc3e78f5ba16baa655291e83\"",
+        "ETag": "\"c1c94d9efc6ba4987836d802681243a9\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "b25f5fd7-4702-400b-a87f-73a36b11010c",
-        "X-Runtime": "0.004375",
+        "X-Request-Id": "9e63ea2c-ea16-41f5-a696-0261f92196aa",
+        "X-Runtime": "0.004610",
         "Content-Length": "550"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": null
+      "curl": "curl \"todos.oestri.ch/todos/792eecd7-3082-423c-94f8-52b4196dc5b0\" -d '{\"todo\":{\"title\":\"new title\",\"due_date\":\"2014-11-01\"}}' -X PUT \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\""
     }
   ]
 }

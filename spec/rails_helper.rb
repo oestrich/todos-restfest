@@ -53,4 +53,6 @@ RspecApiDocumentation.configure do |config|
   config.format = :json
   config.api_name = "Todo"
   config.request_headers_to_include = ["Accept", "Content-Type"]
+  config.curl_host = "todos.oestri.ch"
+  config.curl_headers_to_filter = ["Host", "Cookie"]
 end

@@ -24,20 +24,20 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"_embedded\":{\"categories\":[{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/categories/076ea322-411c-4af8-a3c2-17805b176be4\"}},\"id\":\"076ea322-411c-4af8-a3c2-17805b176be4\",\"name\":\"Work\",\"created_at\":\"2014-09-25T18:39:20.061Z\",\"updated_at\":\"2014-09-25T18:39:20.061Z\"}]},\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/categories\",\"name\":\"Categories\"},\"up\":{\"href\":\"http://example.org/\"}}}",
+      "response_body": "{\"_embedded\":{\"categories\":[{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/categories/dc60d7b9-5532-4ab6-87dd-5fe82297ab48\"}},\"id\":\"dc60d7b9-5532-4ab6-87dd-5fe82297ab48\",\"name\":\"Work\",\"created_at\":\"2014-09-25T18:45:30.116Z\",\"updated_at\":\"2014-09-25T18:45:30.116Z\"}]},\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/categories\",\"name\":\"Categories\"},\"up\":{\"href\":\"http://example.org/\"}}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"a6d080719aeafae2b7927162779089e8\"",
+        "ETag": "\"d5730218451be2030ca436bf548813f2\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "7573e60b-2271-4989-b083-e65b3f9a9f5a",
-        "X-Runtime": "0.006973",
+        "X-Request-Id": "37bd1e88-6ee5-4ed4-bc82-2a105c030c33",
+        "X-Runtime": "0.007131",
         "Content-Length": "575"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": null
+      "curl": "curl \"todos.oestri.ch/categories\" -X GET \\\n\t-H \"Accept: application/json\" \\\n\t-H \"Content-Type: application/json\""
     }
   ]
 }
