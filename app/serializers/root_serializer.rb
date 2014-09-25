@@ -7,11 +7,13 @@ class RootSerializer < ActiveModel::Serializer
         "href" => root_url
       },
       "todos:incomplete" => {
-        "href" => todos_url,
+        "templated" => true,
+        "href" => "#{todos_url}{?page,per_page}",
         "name" => "Incomplete todos",
       },
       "todos:complete" => {
-        "href" => completed_todos_url,
+        "templated" => true,
+        "href" => "#{completed_todos_url}{?page,per_page}",
         "name" => "Completed todos",
       },
       "todos:docs" => {

@@ -17,11 +17,13 @@ resource "Root" do
             "href" => root_url(:host => host),
           },
           "todos:incomplete" => {
-            "href" => todos_url(:host => host),
+            "templated" => true,
+            "href" => "#{todos_url(:host => host)}{?page,per_page}",
             "name" => "Incomplete todos",
           },
           "todos:complete" => {
-            "href" => completed_todos_url(:host => host),
+            "templated" => true,
+            "href" => "#{completed_todos_url(:host => host)}{?page,per_page}",
             "name" => "Completed todos",
           },
           "todos:docs" => {
