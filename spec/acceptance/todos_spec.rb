@@ -13,6 +13,10 @@ resource "Todos" do
     })
   end
 
+  let!(:category) do
+    Category.create(:name => "School")
+  end
+
   get "/todos" do
     parameter :page, "Current page"
     parameter :per_page, "Number of todos to load per page"
@@ -36,6 +40,10 @@ resource "Todos" do
               "due_date" => "2014-10-01",
               "notes" => "calculus will be hard",
               "completed_on" => nil,
+              "_embedded" => {
+                "categories" => [
+                ],
+              },
               "_links" => {
                 "curies" => [{
                   "name" => "todos",
@@ -94,6 +102,10 @@ resource "Todos" do
               "due_date" => nil,
               "notes" => nil,
               "completed_on" => Date.today,
+              "_embedded" => {
+                "categories" => [
+                ],
+              },
               "_links" => {
                 "curies" => [{
                   "name" => "todos",
@@ -140,6 +152,10 @@ resource "Todos" do
         "due_date" => "2014-10-01",
         "notes" => "calculus will be hard",
         "completed_on" => nil,
+        "_embedded" => {
+          "categories" => [
+          ],
+        },
         "_links" => {
           "curies" => [{
             "name" => "todos",
@@ -162,9 +178,11 @@ resource "Todos" do
     parameter :title, "Title of todo", "Type" => "string", :scope => "todo", :required => true
     parameter :due_date, "Date todo is due", "Type" => "date", :scope => "todo"
     parameter :notes, "Extra notes for the todo", "Type" => "string", :scope => "todo"
+    parameter :category_ids, "Array of category ids to assign to", "Type" => "uuid[]", :scope => "todo"
 
     let(:title) { "new title" }
     let(:due_date) { "2014-11-01" }
+    let(:category_ids) { [category.id] }
 
     let(:raw_post) { params.to_json }
 
@@ -176,6 +194,23 @@ resource "Todos" do
         "due_date" => "2014-11-01",
         "notes" => nil,
         "completed_on" => nil,
+        "_embedded" => {
+          "categories" => [
+            {
+              "name" => "School",
+              "_links" => {
+                "curies" => [{
+                  "name" => "todos",
+                  "href" => "http://todos.smartlogic.io/relations/{rel}",
+                  "templated" => true
+                }],
+                "self" => {
+                  "href" => category_url(category.id, :host => host)
+                },
+              },
+            }
+          ],
+        },
         "_links" => {
           "curies" => [{
             "name" => "todos",
@@ -199,6 +234,7 @@ resource "Todos" do
     parameter :title, "Title of todo", "Type" => "string", :scope => "todo", :required => true
     parameter :due_date, "Date todo is due", "Type" => "date", :scope => "todo"
     parameter :notes, "Extra notes for the todo", "Type" => "string", :scope => "todo"
+    parameter :category_ids, "Array of category ids to assign to", "Type" => "uuid[]", :scope => "todo"
 
     let(:title) { "new title" }
     let(:due_date) { "2014-11-01" }
@@ -214,6 +250,10 @@ resource "Todos" do
           "due_date" => "2014-11-01",
           "notes" => "calculus will be hard",
           "completed_on" => nil,
+          "_embedded" => {
+            "categories" => [
+            ],
+          },
           "_links" => {
             "curies" => [{
               "name" => "todos",
@@ -241,6 +281,10 @@ resource "Todos" do
           "due_date" => "2014-11-01",
           "notes" => nil,
           "completed_on" => nil,
+          "_embedded" => {
+            "categories" => [
+            ],
+          },
           "_links" => {
             "curies" => [{
               "name" => "todos",
@@ -270,6 +314,10 @@ resource "Todos" do
         "due_date" => "2014-10-01",
         "notes" => "calculus will be hard",
         "completed_on" => Date.today,
+        "_embedded" => {
+          "categories" => [
+          ],
+        },
         "_links" => {
           "curies" => [{
             "name" => "todos",
@@ -297,6 +345,10 @@ resource "Todos" do
         "due_date" => "2014-10-01",
         "notes" => "calculus will be hard",
         "completed_on" => nil,
+        "_embedded" => {
+          "categories" => [
+          ],
+        },
         "_links" => {
           "curies" => [{
             "name" => "todos",

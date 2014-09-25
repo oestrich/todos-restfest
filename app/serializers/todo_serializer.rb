@@ -2,6 +2,19 @@ class TodoSerializer < ActiveModel::Serializer
   include ApplicationSerializer
 
   attributes :id, :title, :due_date, :notes, :created_at, :updated_at, :completed_on
+  attributes :_embedded
+
+  def as_json(*args)
+    hash = super
+    hash.delete(:categories)
+    hash
+  end
+
+  def _embedded
+    {
+      "categories" => categories,
+    }
+  end
 
   def _links
     hash = super
@@ -26,6 +39,12 @@ class TodoSerializer < ActiveModel::Serializer
   end
 
   private
+
+  def categories
+    todo.categories.map do |todo|
+      CategorySerializer.new(todo, @options)
+    end
+  end
 
   def todo
     @object
