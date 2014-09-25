@@ -1,0 +1,67 @@
+{
+  "resource": "Todos",
+  "http_method": "DELETE",
+  "route": "/todos/:id",
+  "description": "Removing a todo",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "DELETE",
+      "request_path": "/todos/2b542e11-4d70-4b08-9dd8-22a6c265d001",
+      "request_body": null,
+      "request_headers": {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 204,
+      "response_status_text": "No Content",
+      "response_body": null,
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Location": "http://example.org/todos",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "8223c7f7-f62c-4933-ab8e-4f1441e10ca6",
+        "X-Runtime": "0.003279"
+      },
+      "response_content_type": null,
+      "curl": null
+    },
+    {
+      "request_method": "GET",
+      "request_path": "http://example.org/todos",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"_embedded\":{\"todos\":[]},\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"up\":{\"href\":\"http://example.org/\"},\"self\":{\"href\":\"http://example.org/todos?page=1\\u0026per_page=5\",\"name\":\"Incomplete todos\"}}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"fca6cae47c1dde62d2cd21a046aa8453\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "9580d146-47ff-4a67-9bbd-194410104b19",
+        "X-Runtime": "0.002332",
+        "Content-Length": "262"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

@@ -116,4 +116,36 @@ resource "Categories" do
       }.to_json)
     end
   end
+
+  delete "/categories/:id" do
+    let(:id) { category.id }
+
+    example_request "Removing a category" do
+      expect(response_body).to eq("")
+      expect(status).to eq(204)
+
+      client.get(response_headers["Location"])
+
+      expect(response_body).to be_json_eql({
+        "_embedded" => {
+          "categories" => [
+          ],
+        },
+        "_links" => {
+          "curies" => [{
+            "name" => "todos",
+            "href" => "http://todos.smartlogic.io/relations/{rel}",
+            "templated" => true
+          }],
+          "self" => {
+            "href" => categories_url(:host => host),
+            "name" => "Categories",
+          },
+          "up" => {
+            "href" => root_url(:host => host),
+          },
+        }
+      }.to_json)
+    end
+  end
 end

@@ -37,7 +37,7 @@
   "requests": [
     {
       "request_method": "PUT",
-      "request_path": "/todos/91079a02-25e9-432c-8411-0f2755674eb1",
+      "request_path": "/todos/4e02b533-b1c8-453c-ab23-1d669401c7c4",
       "request_body": "{\"todo\":{\"title\":\"new title\",\"due_date\":\"2014-11-01\"}}",
       "request_headers": {
         "Accept": "application/json",
@@ -48,16 +48,16 @@
       "request_content_type": "application/json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/91079a02-25e9-432c-8411-0f2755674eb1\"},\"todos:complete\":{\"href\":\"http://example.org/todos/91079a02-25e9-432c-8411-0f2755674eb1/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"91079a02-25e9-432c-8411-0f2755674eb1\",\"title\":\"new title\",\"due_date\":\"2014-11-01\",\"notes\":null,\"created_at\":\"2014-09-25T18:26:55.732Z\",\"updated_at\":\"2014-09-25T18:26:55.732Z\",\"completed_on\":null,\"_embedded\":{\"categories\":[]}}",
+      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/4e02b533-b1c8-453c-ab23-1d669401c7c4\"},\"todos:complete\":{\"href\":\"http://example.org/todos/4e02b533-b1c8-453c-ab23-1d669401c7c4/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"4e02b533-b1c8-453c-ab23-1d669401c7c4\",\"title\":\"new title\",\"due_date\":\"2014-11-01\",\"notes\":null,\"created_at\":\"2014-09-25T18:39:20.235Z\",\"updated_at\":\"2014-09-25T18:39:20.235Z\",\"completed_on\":null,\"_embedded\":{\"categories\":[]}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"699d62012c70f1bd2fc80afdfceb085c\"",
+        "ETag": "\"df1f3c02dc3e78f5ba16baa655291e83\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "a0674bbe-cc95-4f0e-ade9-da0e01c3a5ba",
-        "X-Runtime": "0.004231",
+        "X-Request-Id": "b25f5fd7-4702-400b-a87f-73a36b11010c",
+        "X-Runtime": "0.004375",
         "Content-Length": "550"
       },
       "response_content_type": "application/json; charset=utf-8",

@@ -28,6 +28,12 @@ class CategoriesController < ApplicationController
     render :json => category, :serializer => CategorySerializer
   end
 
+  def destroy
+    category = Category.find(params[:id])
+    category.destroy
+    render :nothing => true, :status => 204, :location => categories_url
+  end
+
   private
 
   def category_params

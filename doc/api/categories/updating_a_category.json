@@ -19,7 +19,7 @@
   "requests": [
     {
       "request_method": "PUT",
-      "request_path": "/categories/8db89eb1-a79b-4358-bcb0-b032f7657df3",
+      "request_path": "/categories/364ae052-c16e-4690-aed5-43e290ea56d3",
       "request_body": "{\"category\":{\"name\":\"School\"}}",
       "request_headers": {
         "Accept": "application/json",
@@ -30,16 +30,16 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/categories/8db89eb1-a79b-4358-bcb0-b032f7657df3\"}},\"id\":\"8db89eb1-a79b-4358-bcb0-b032f7657df3\",\"name\":\"School\",\"created_at\":\"2014-09-25T18:26:55.601Z\",\"updated_at\":\"2014-09-25T18:26:55.603Z\"}",
+      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/categories/364ae052-c16e-4690-aed5-43e290ea56d3\"}},\"id\":\"364ae052-c16e-4690-aed5-43e290ea56d3\",\"name\":\"School\",\"created_at\":\"2014-09-25T18:39:20.090Z\",\"updated_at\":\"2014-09-25T18:39:20.093Z\"}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"fbea458783a5e57b227abf378fb69588\"",
+        "ETag": "\"87518d13123375e5604a4104c95da780\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "ad0617fd-873e-48b6-93ef-50d6c37ad214",
-        "X-Runtime": "0.003529",
+        "X-Request-Id": "c280b131-2760-459f-94fa-ffe4dafadcc6",
+        "X-Runtime": "0.003469",
         "Content-Length": "334"
       },
       "response_content_type": "application/json; charset=utf-8",

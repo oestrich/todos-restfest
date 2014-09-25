@@ -9,6 +9,11 @@
           "groups": "all"
         },
         {
+          "description": "Removing a category",
+          "link": "categories/removing_a_category.json",
+          "groups": "all"
+        },
+        {
           "description": "Updating a category",
           "link": "categories/updating_a_category.json",
           "groups": "all"
@@ -51,6 +56,11 @@
         {
           "description": "Creating a new todo with a given id",
           "link": "todos/creating_a_new_todo_with_a_given_id.json",
+          "groups": "all"
+        },
+        {
+          "description": "Removing a todo",
+          "link": "todos/removing_a_todo.json",
           "groups": "all"
         },
         {
