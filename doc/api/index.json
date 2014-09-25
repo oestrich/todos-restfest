@@ -1,0 +1,14 @@
+{
+  "resources": [
+    {
+      "name": "Root",
+      "examples": [
+        {
+          "description": "Viewing the root resource",
+          "link": "root/viewing_the_root_resource.json",
+          "groups": "all"
+        }
+      ]
+    }
+  ]
+}

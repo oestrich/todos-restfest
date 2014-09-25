@@ -48,3 +48,8 @@ RSpec.configure do |config|
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
 end
+
+RspecApiDocumentation.configure do |config|
+  config.format = :json
+  config.api_name = "Todo"
+end
