@@ -3,6 +3,7 @@ require 'rspec_api_documentation/dsl'
 
 resource "Categories" do
   include_context :routes
+  include_context :json
 
   let!(:category) do
     Category.create(:name => "Work")
@@ -51,18 +52,43 @@ resource "Categories" do
 
     example_request "Viewing a category" do
       expect(response_body).to be_json_eql({
-          "name" => "Work",
-          "_links" => {
-            "curies" => [{
-              "name" => "todos",
-              "href" => "http://todos.smartlogic.io/relations/{rel}",
-              "templated" => true
-            }],
-            "self" => {
-              "href" => category_url(category, :host => host),
-            },
+        "name" => "Work",
+        "_links" => {
+          "curies" => [{
+            "name" => "todos",
+            "href" => "http://todos.smartlogic.io/relations/{rel}",
+            "templated" => true
+          }],
+          "self" => {
+            "href" => category_url(category, :host => host),
           },
-        }.to_json)
+        },
+      }.to_json)
+    end
+  end
+
+  post "/categories" do
+    parameter :name, "Name of the category", :required => true, :scope => "category", "Type" => "string"
+
+    let(:name) { "School" }
+
+    let(:raw_post) { params.to_json }
+
+    example_request "Create a new category" do
+      location = response_headers["Location"]
+      expect(response_body).to be_json_eql({
+        "name" => "School",
+        "_links" => {
+          "curies" => [{
+            "name" => "todos",
+            "href" => "http://todos.smartlogic.io/relations/{rel}",
+            "templated" => true
+          }],
+          "self" => {
+            "href" => location,
+          },
+        },
+      }.to_json)
     end
   end
 end
