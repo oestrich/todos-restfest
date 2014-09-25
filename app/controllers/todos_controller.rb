@@ -10,7 +10,7 @@ class TodosController < ApplicationController
 
   def create
     todo = Todo.create(todo_params)
-    render :json => todo, :serializer => TodoSerializer, :status => 201
+    render :json => todo, :serializer => TodoSerializer, :status => 201, :location => todo_url(todo)
   end
 
   private

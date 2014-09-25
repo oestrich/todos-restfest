@@ -28,6 +28,9 @@ resource "Todos" do
                   "href" => "http://todos.smartlogic.io/relations/{rel}",
                   "templated" => true
                 }],
+                "self" => {
+                  "href" => todo_url(todo.id, :host => host),
+                },
               },
             },
           ],
@@ -62,6 +65,9 @@ resource "Todos" do
             "href" => "http://todos.smartlogic.io/relations/{rel}",
             "templated" => true
           }],
+          "self" => {
+            "href" => todo_url(todo.id, :host => host),
+          },
         },
       }.to_json)
     end
@@ -76,6 +82,7 @@ resource "Todos" do
     let(:due_date) { "2014-11-01" }
 
     example_request "Creating a new todo" do
+      location = response_headers["Location"]
       expect(response_body).to be_json_eql({
         "title" => "new title",
         "due_date" => "2014-11-01",
@@ -86,8 +93,11 @@ resource "Todos" do
             "href" => "http://todos.smartlogic.io/relations/{rel}",
             "templated" => true
           }],
+          "self" => {
+            "href" => location,
+          }
         },
-      }.to_json)
+      }.to_json).excluding("_links/self/href")
     end
   end
 end
