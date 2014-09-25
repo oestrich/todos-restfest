@@ -3,6 +3,10 @@ class Todo < ActiveRecord::Base
     where(:completed_on => nil)
   end
 
+  def self.complete
+    where("completed_on IS NOT NULL")
+  end
+
   def complete!
     update(:completed_on => Date.today)
   end

@@ -21,7 +21,7 @@ resource "Todos" do
       })
     end
 
-    example_request "Viewing a list of all todos" do
+    example_request "Viewing a list of all incomplete todos" do
       expect(response_body).to be_json_eql({
         "_embedded" => {
           "todos" => [
@@ -54,6 +54,53 @@ resource "Todos" do
           }],
           "self" => {
             "href" => todos_url(:host => host),
+          },
+        }
+      }.to_json)
+    end
+  end
+
+  get "/todos/completed" do
+    let!(:completed_todo) do
+      Todo.create({
+        :title => "finish my homework again",
+        :completed_on => Date.today,
+      })
+    end
+
+    example_request "Viewing a list of all completed todos" do
+      expect(response_body).to be_json_eql({
+        "_embedded" => {
+          "todos" => [
+            {
+              "title" => "finish my homework again",
+              "due_date" => nil,
+              "notes" => nil,
+              "completed_on" => Date.today,
+              "_links" => {
+                "curies" => [{
+                  "name" => "todos",
+                  "href" => "http://todos.smartlogic.io/relations/{rel}",
+                  "templated" => true
+                }],
+                "self" => {
+                  "href" => todo_url(completed_todo.id, :host => host),
+                },
+                "todos:incomplete" => {
+                  "href" => incomplete_todo_url(completed_todo.id, :host => host),
+                },
+              },
+            },
+          ],
+        },
+        "_links" => {
+          "curies" => [{
+            "name" => "todos",
+            "href" => "http://todos.smartlogic.io/relations/{rel}",
+            "templated" => true
+          }],
+          "self" => {
+            "href" => completed_todos_url(:host => host),
           },
         }
       }.to_json)

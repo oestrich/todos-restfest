@@ -16,6 +16,12 @@ resource "Root" do
           "self" => {
             "href" => root_url(:host => host),
           },
+          "todos:incomplete" => {
+            "href" => todos_url(:host => host),
+          },
+          "todos:complete" => {
+            "href" => completed_todos_url(:host => host),
+          },
         }
       }.to_json)
     end

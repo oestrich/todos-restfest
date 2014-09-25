@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
   resources :todos, :only => [:index, :show, :create], :format => false do
+    collection do
+      get :completed
+    end
+
     member do
       post :complete
       post :incomplete

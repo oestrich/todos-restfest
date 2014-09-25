@@ -3,6 +3,10 @@ class TodosController < ApplicationController
     render :json => Todo.incomplete, :serializer => TodosSerializer, :each_serializer => TodoSerializer
   end
 
+  def completed
+    render :json => Todo.complete, :serializer => TodosSerializer, :each_serializer => TodoSerializer, :completed => true
+  end
+
   def show
     todo = Todo.find(params[:id])
     render :json => todo, :serializer => TodoSerializer
