@@ -91,4 +91,29 @@ resource "Categories" do
       }.to_json)
     end
   end
+
+  put "/categories/:id" do
+    parameter :name, "Name of the category", :required => true, :scope => "category", "Type" => "string"
+
+    let(:id) { category.id }
+    let(:name) { "School" }
+
+    let(:raw_post) { params.to_json }
+
+    example_request "Updating a category" do
+      expect(response_body).to be_json_eql({
+        "name" => "School",
+        "_links" => {
+          "curies" => [{
+            "name" => "todos",
+            "href" => "http://todos.smartlogic.io/relations/{rel}",
+            "templated" => true
+          }],
+          "self" => {
+            "href" => category_url(category.id, :host => host),
+          },
+        },
+      }.to_json)
+    end
+  end
 end

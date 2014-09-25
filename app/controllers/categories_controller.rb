@@ -22,6 +22,12 @@ class CategoriesController < ApplicationController
     })
   end
 
+  def update
+    category = Category.find(params[:id])
+    category.update(category_params)
+    render :json => category, :serializer => CategorySerializer
+  end
+
   private
 
   def category_params
