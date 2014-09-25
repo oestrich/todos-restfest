@@ -34,6 +34,10 @@ resource "Root" do
             "href" => docs_url(:host => host),
             "name" => "Human documentation",
           },
+          "todos:source" => {
+            "href" => "https://github.com/oestrich/todos-restfest",
+            "name" => "Link to github project",
+          },
         }
       }.to_json)
     end

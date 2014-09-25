@@ -24,6 +24,10 @@ class RootSerializer < ActiveModel::Serializer
         "href" => docs_url,
         "name" => "Human documentation",
       },
+      "todos:source" => {
+        "href" => "https://github.com/oestrich/todos-restfest",
+        "name" => "Link to github project",
+      },
     })
   end
 end
