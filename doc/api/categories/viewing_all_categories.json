@@ -1,0 +1,41 @@
+{
+  "resource": "Categories",
+  "http_method": "GET",
+  "route": "/categories",
+  "description": "Viewing all categories",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/categories",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"_embedded\":{\"categories\":[{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/categories/b3c2de00-13f8-4bc1-8284-c729012dd336\"}},\"id\":\"b3c2de00-13f8-4bc1-8284-c729012dd336\",\"name\":\"Work\",\"created_at\":\"2014-09-25T18:06:09.390Z\",\"updated_at\":\"2014-09-25T18:06:09.390Z\"}]},\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/categories\",\"name\":\"Categories\"},\"up\":{\"href\":\"http://example.org/\"}}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"1c29e672582e9629e19786303ac17a71\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "22825f4a-291a-4b23-bd87-198b5627d201",
+        "X-Runtime": "0.006717",
+        "Content-Length": "575"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

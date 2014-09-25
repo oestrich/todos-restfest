@@ -1,6 +1,21 @@
 {
   "resources": [
     {
+      "name": "Categories",
+      "examples": [
+        {
+          "description": "Viewing a category",
+          "link": "categories/viewing_a_category.json",
+          "groups": "all"
+        },
+        {
+          "description": "Viewing all categories",
+          "link": "categories/viewing_all_categories.json",
+          "groups": "all"
+        }
+      ]
+    },
+    {
       "name": "Root",
       "examples": [
         {

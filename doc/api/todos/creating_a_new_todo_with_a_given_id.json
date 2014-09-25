@@ -23,6 +23,12 @@
       "scope": "todo",
       "name": "notes",
       "description": "Extra notes for the todo"
+    },
+    {
+      "Type": "uuid[]",
+      "scope": "todo",
+      "name": "category_ids",
+      "description": "Array of category ids to assign to"
     }
   ],
   "response_fields": [
@@ -31,7 +37,7 @@
   "requests": [
     {
       "request_method": "PUT",
-      "request_path": "/todos/51d85bdf-d24d-4a14-9fd0-773111d6d8fb",
+      "request_path": "/todos/24bd51ce-b1ab-4f01-8ce1-5e2007e7caba",
       "request_body": "{\"todo\":{\"title\":\"new title\",\"due_date\":\"2014-11-01\"}}",
       "request_headers": {
         "Accept": "application/json",
@@ -42,17 +48,17 @@
       "request_content_type": "application/json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/51d85bdf-d24d-4a14-9fd0-773111d6d8fb\"},\"todos:complete\":{\"href\":\"http://example.org/todos/51d85bdf-d24d-4a14-9fd0-773111d6d8fb/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"51d85bdf-d24d-4a14-9fd0-773111d6d8fb\",\"title\":\"new title\",\"due_date\":\"2014-11-01\",\"notes\":null,\"created_at\":\"2014-09-25T17:03:00.610Z\",\"updated_at\":\"2014-09-25T17:03:00.610Z\",\"completed_on\":null}",
+      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/24bd51ce-b1ab-4f01-8ce1-5e2007e7caba\"},\"todos:complete\":{\"href\":\"http://example.org/todos/24bd51ce-b1ab-4f01-8ce1-5e2007e7caba/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"24bd51ce-b1ab-4f01-8ce1-5e2007e7caba\",\"title\":\"new title\",\"due_date\":\"2014-11-01\",\"notes\":null,\"created_at\":\"2014-09-25T18:06:09.537Z\",\"updated_at\":\"2014-09-25T18:06:09.537Z\",\"completed_on\":null,\"_embedded\":{\"categories\":[]}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"9e3d49aae434ec28c950bd45407c33fd\"",
+        "ETag": "\"ffaeb3f61b8f04d4bb78113ec7cf7e08\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "311654c2-8d89-46b8-bdcb-2cfe8dd93612",
-        "X-Runtime": "0.003287",
-        "Content-Length": "520"
+        "X-Request-Id": "f24355f5-23d0-4ed7-987a-42b4464d9060",
+        "X-Runtime": "0.004322",
+        "Content-Length": "550"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null

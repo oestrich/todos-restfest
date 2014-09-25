@@ -1,0 +1,41 @@
+{
+  "resource": "Categories",
+  "http_method": "GET",
+  "route": "/categories/:id",
+  "description": "Viewing a category",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/categories/bc501489-3085-4ee8-868f-67e46eb66a2a",
+      "request_body": null,
+      "request_headers": {
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": null,
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/categories/bc501489-3085-4ee8-868f-67e46eb66a2a\"}},\"id\":\"bc501489-3085-4ee8-868f-67e46eb66a2a\",\"name\":\"Work\",\"created_at\":\"2014-09-25T18:06:09.408Z\",\"updated_at\":\"2014-09-25T18:06:09.408Z\"}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "\"43e30fd716cbf39be535ea31f22d7c71\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "7a9b60c4-61e0-4f6c-99b5-cafe69c058cd",
+        "X-Runtime": "0.003161",
+        "Content-Length": "332"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": null
+    }
+  ]
+}

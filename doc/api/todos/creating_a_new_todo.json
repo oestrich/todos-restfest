@@ -23,6 +23,12 @@
       "scope": "todo",
       "name": "notes",
       "description": "Extra notes for the todo"
+    },
+    {
+      "Type": "uuid[]",
+      "scope": "todo",
+      "name": "category_ids",
+      "description": "Array of category ids to assign to"
     }
   ],
   "response_fields": [
@@ -32,7 +38,7 @@
     {
       "request_method": "POST",
       "request_path": "/todos",
-      "request_body": "{\"todo\":{\"title\":\"new title\",\"due_date\":\"2014-11-01\"}}",
+      "request_body": "{\"todo\":{\"title\":\"new title\",\"due_date\":\"2014-11-01\",\"category_ids\":[\"97318b2a-f506-4397-959d-64c37bb25a1f\"]}}",
       "request_headers": {
         "Accept": "application/json",
         "Content-Type": "application/json"
@@ -42,18 +48,18 @@
       "request_content_type": "application/json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/413f25f4-d6c2-4c09-8fd8-2cdae1f1af25\"},\"todos:complete\":{\"href\":\"http://example.org/todos/413f25f4-d6c2-4c09-8fd8-2cdae1f1af25/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"413f25f4-d6c2-4c09-8fd8-2cdae1f1af25\",\"title\":\"new title\",\"due_date\":\"2014-11-01\",\"notes\":null,\"created_at\":\"2014-09-25T17:03:00.596Z\",\"updated_at\":\"2014-09-25T17:03:00.596Z\",\"completed_on\":null}",
+      "response_body": "{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/todos/e0fcaeac-4ab6-4de8-93f0-9475aabf3c7c\"},\"todos:complete\":{\"href\":\"http://example.org/todos/e0fcaeac-4ab6-4de8-93f0-9475aabf3c7c/complete\",\"name\":\"Mark todo as complete\"}},\"id\":\"e0fcaeac-4ab6-4de8-93f0-9475aabf3c7c\",\"title\":\"new title\",\"due_date\":\"2014-11-01\",\"notes\":null,\"created_at\":\"2014-09-25T18:06:09.517Z\",\"updated_at\":\"2014-09-25T18:06:09.517Z\",\"completed_on\":null,\"_embedded\":{\"categories\":[{\"_links\":{\"curies\":[{\"name\":\"todos\",\"href\":\"http://todos.smartlogic.io/relations/{rel}\",\"templated\":true}],\"self\":{\"href\":\"http://example.org/categories/97318b2a-f506-4397-959d-64c37bb25a1f\"}},\"id\":\"97318b2a-f506-4397-959d-64c37bb25a1f\",\"name\":\"School\",\"created_at\":\"2014-09-25T18:06:09.507Z\",\"updated_at\":\"2014-09-25T18:06:09.507Z\"}]}}",
       "response_headers": {
         "X-Frame-Options": "SAMEORIGIN",
         "X-XSS-Protection": "1; mode=block",
         "X-Content-Type-Options": "nosniff",
-        "Location": "http://example.org/todos/413f25f4-d6c2-4c09-8fd8-2cdae1f1af25",
+        "Location": "http://example.org/todos/e0fcaeac-4ab6-4de8-93f0-9475aabf3c7c",
         "Content-Type": "application/json; charset=utf-8",
-        "ETag": "\"612bbd8867dcb2cc197b1d5d8ffef3b5\"",
+        "ETag": "\"419226ebafa1cfcf22f0c1c58244a808\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "103ad138-56ee-49b4-91ff-8734bbb3791e",
-        "X-Runtime": "0.002789",
-        "Content-Length": "520"
+        "X-Request-Id": "c65a4b0a-8191-4ae4-9552-3023dd06542b",
+        "X-Runtime": "0.011608",
+        "Content-Length": "884"
       },
       "response_content_type": "application/json; charset=utf-8",
       "curl": null
