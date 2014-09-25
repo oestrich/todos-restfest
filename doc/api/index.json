@@ -14,8 +14,18 @@
       "name": "Todos",
       "examples": [
         {
+          "description": "Creating a new todo",
+          "link": "todos/creating_a_new_todo.json",
+          "groups": "all"
+        },
+        {
           "description": "Viewing a list of all todos",
           "link": "todos/viewing_a_list_of_all_todos.json",
+          "groups": "all"
+        },
+        {
+          "description": "Viewing a todo",
+          "link": "todos/viewing_a_todo.json",
           "groups": "all"
         }
       ]

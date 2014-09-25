@@ -7,4 +7,15 @@ class TodosController < ApplicationController
     todo = Todo.find(params[:id])
     render :json => todo, :serializer => TodoSerializer
   end
+
+  def create
+    todo = Todo.create(todo_params)
+    render :json => todo, :serializer => TodoSerializer, :status => 201
+  end
+
+  private
+
+  def todo_params
+    params.require(:todo).permit(:title, :due_date, :notes)
+  end
 end

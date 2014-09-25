@@ -16,10 +16,9 @@
       "request_path": "/",
       "request_body": null,
       "request_headers": {
-        "Host": "example.org",
-        "Cookie": ""
       },
       "request_query_parameters": {
+        "{}": null
       },
       "request_content_type": null,
       "response_status": 200,
@@ -32,8 +31,8 @@
         "Content-Type": "application/json; charset=utf-8",
         "ETag": "\"bac6e1d158bfe0eda52e1d85036e81c4\"",
         "Cache-Control": "max-age=0, private, must-revalidate",
-        "X-Request-Id": "1df25679-081d-40cd-bcfd-d8a5466138b0",
-        "X-Runtime": "0.004643",
+        "X-Request-Id": "bdb95f1f-2194-40cc-b9a7-5e4dcee14c38",
+        "X-Runtime": "0.004847",
         "Content-Length": "147"
       },
       "response_content_type": "application/json; charset=utf-8",

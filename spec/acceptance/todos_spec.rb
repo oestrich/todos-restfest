@@ -3,6 +3,7 @@ require 'rspec_api_documentation/dsl'
 
 resource "Todos" do
   include_context :routes
+  include_context :json
 
   let!(:todo) do
     Todo.create({
@@ -55,6 +56,30 @@ resource "Todos" do
         "title" => "finish my homework",
         "due_date" => "2014-10-01",
         "notes" => "calculus will be hard",
+        "_links" => {
+          "curies" => [{
+            "name" => "todos",
+            "href" => "http://todos.smartlogic.io/relations/{rel}",
+            "templated" => true
+          }],
+        },
+      }.to_json)
+    end
+  end
+
+  post "/todos" do
+    parameter :title, "Title of todo", "Type" => "string", :scope => "todo", :required => true
+    parameter :due_date, "Date todo is due", "Type" => "date", :scope => "todo", :required => true
+    parameter :notes, "Extra notes for the todo", "Type" => "string", :scope => "todo"
+
+    let(:title) { "new title" }
+    let(:due_date) { "2014-11-01" }
+
+    example_request "Creating a new todo" do
+      expect(response_body).to be_json_eql({
+        "title" => "new title",
+        "due_date" => "2014-11-01",
+        "notes" => nil,
         "_links" => {
           "curies" => [{
             "name" => "todos",
