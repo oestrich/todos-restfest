@@ -20,10 +20,12 @@ class TodosSerializer < ActiveModel::ArraySerializer
     if @options[:completed]
       hash[:_links]["self"] = {
         "href" => completed_todos_url,
+        "name" => "Completed todos",
       }
     else
       hash[:_links]["self"] = {
         "href" => todos_url,
+        "name" => "Incomplete todos",
       }
     end
     hash

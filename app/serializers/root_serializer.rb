@@ -8,9 +8,11 @@ class RootSerializer < ActiveModel::Serializer
       },
       "todos:incomplete" => {
         "href" => todos_url,
+        "name" => "Incomplete todos",
       },
       "todos:complete" => {
         "href" => completed_todos_url,
+        "name" => "Completed todos",
       },
     })
   end

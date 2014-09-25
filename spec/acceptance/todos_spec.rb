@@ -41,6 +41,7 @@ resource "Todos" do
                 },
                 "todos:complete" => {
                   "href" => complete_todo_url(todo.id, :host => host),
+                  "name" => "Mark todo as complete",
                 },
               },
             },
@@ -54,6 +55,7 @@ resource "Todos" do
           }],
           "self" => {
             "href" => todos_url(:host => host),
+            "name" => "Incomplete todos",
           },
           "up" => {
             "href" => root_url(:host => host),
@@ -91,6 +93,7 @@ resource "Todos" do
                 },
                 "todos:incomplete" => {
                   "href" => incomplete_todo_url(completed_todo.id, :host => host),
+                  "name" => "Mark todo as incomplete",
                 },
               },
             },
@@ -104,6 +107,7 @@ resource "Todos" do
           }],
           "self" => {
             "href" => completed_todos_url(:host => host),
+            "name" => "Completed todos",
           },
           "up" => {
             "href" => root_url(:host => host),
@@ -135,6 +139,7 @@ resource "Todos" do
           },
           "todos:complete" => {
             "href" => complete_todo_url(todo.id, :host => host),
+            "name" => "Mark todo as complete",
           },
         },
       }.to_json)
@@ -168,6 +173,7 @@ resource "Todos" do
           },
           "todos:complete" => {
             "href" => complete_todo_url(todo_id, :host => host),
+            "name" => "Mark todo as complete",
           },
         },
       }.to_json).excluding("_links/self/href")
@@ -195,6 +201,7 @@ resource "Todos" do
           },
           "todos:incomplete" => {
             "href" => incomplete_todo_url(todo.id, :host => host),
+            "name" => "Mark todo as incomplete",
           },
         },
       }.to_json)
@@ -221,6 +228,7 @@ resource "Todos" do
           },
           "todos:complete" => {
             "href" => complete_todo_url(todo.id, :host => host),
+            "name" => "Mark todo as complete",
           },
         },
       }.to_json)

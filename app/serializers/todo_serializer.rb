@@ -12,11 +12,13 @@ class TodoSerializer < ActiveModel::Serializer
 
     if todo.completed?
       hash["todos:incomplete"] = {
-        "href" => incomplete_todo_url(todo)
+        "href" => incomplete_todo_url(todo),
+        "name" => "Mark todo as incomplete",
       }
     else
       hash["todos:complete"] = {
-        "href" => complete_todo_url(todo)
+        "href" => complete_todo_url(todo),
+        "name" => "Mark todo as complete",
       }
     end
 

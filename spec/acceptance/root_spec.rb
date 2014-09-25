@@ -18,9 +18,11 @@ resource "Root" do
           },
           "todos:incomplete" => {
             "href" => todos_url(:host => host),
+            "name" => "Incomplete todos",
           },
           "todos:complete" => {
             "href" => completed_todos_url(:host => host),
+            "name" => "Completed todos",
           },
         }
       }.to_json)
