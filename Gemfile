@@ -13,3 +13,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'rspec_api_documentation'
 end
+
+group :test do
+  gem 'json_spec'
+end
